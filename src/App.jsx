@@ -7,9 +7,11 @@ function App() {
   return (
     <div className="flex h-screen bg-gray-900 text-white">
       <Sidebar />
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col overflow-hidden">
         <Navbar />
-        <FoodList />
+        <main className="flex-1 overflow-y-auto">
+          <FoodList />
+        </main>
       </div>
     </div>
   );

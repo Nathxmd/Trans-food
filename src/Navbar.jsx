@@ -1,4 +1,5 @@
-import { FiSearch, FiBell, FiUser } from "react-icons/fi";
+import { FiSearch, FiBell } from "react-icons/fi";
+import UserProfile from "./UserProfile";
 
 function Navbar() {
   return (
@@ -13,7 +14,7 @@ function Navbar() {
       </div>
       <div className="flex items-center space-x-4">
         <FiBell />
-        <FiUser />
+        <UserProfile />
       </div>
     </div>
   );
