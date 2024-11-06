@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useOrders } from "./hooks/useOrders";
+import { useOrders } from "../../hooks/useOrders";
 import { FiShoppingCart } from "react-icons/fi";
 import PropTypes from "prop-types";
 

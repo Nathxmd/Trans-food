@@ -1,6 +1,6 @@
-import { usePagination } from "./hooks/usePagination";
+import { usePagination } from "../../hooks/usePagination";
 import ProductCard from "./ProductCard";
-import Pagination from "./components/common/pagination";
+import Pagination from "../common/pagination";
 
 const foodItems = [
   { id: 1, name: "Rawon Malang", price: 23000, image: "rawon.jpg" },

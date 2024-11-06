@@ -1,5 +1,5 @@
 import { FiSearch, FiBell } from "react-icons/fi";
-import UserProfile from "./UserProfile";
+import UserProfile from "../../UserProfile";
 
 function Navbar() {
   return (

@@ -1,5 +1,5 @@
 // src/hooks/useOrders.js
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import {
   collection,
   addDoc,
@@ -8,9 +8,11 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "../config/firebase";
+import { OrderContext } from "../context/OrderContext";
 
 export const useOrders = () => {
-  const [orders, setOrders] = useState([]);
+  const { orders, setOrders } = useContext(OrderContext);
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -26,7 +28,7 @@ export const useOrders = () => {
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [setOrders]);
 
   const addOrder = async (product) => {
     try {

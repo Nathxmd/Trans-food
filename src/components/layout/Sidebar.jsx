@@ -1,8 +1,10 @@
 import { FiHome, FiLogOut, FiShoppingBag, FiMenu } from "react-icons/fi";
-import logo from "./assets/logo.svg";
+import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.svg";
 import { useState } from "react";
 
 function Sidebar() {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -27,7 +29,10 @@ function Sidebar() {
               <FiHome />
               <span>Beranda</span>
             </div>
-            <div className="flex items-center space-x-2 p-3 hover:bg-gray-700 rounded-lg cursor-pointer">
+            <div
+              onClick={() => navigate("/orders")}
+              className="flex items-center space-x-2 p-3 hover:bg-gray-700 rounded-lg cursor-pointer"
+            >
               <FiShoppingBag />
               <span>Pesanan</span>
             </div>
